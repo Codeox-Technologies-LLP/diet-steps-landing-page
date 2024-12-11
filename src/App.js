@@ -1,4 +1,5 @@
-Dimport React, { Suspense, lazy } from "react";
+
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -16,7 +17,7 @@ function App() {
         <Route path="/contact" element={<Suspense fallback={<Preloader />} ><Contact /></Suspense>} />
         <Route path="/terms" element={<Suspense fallback={<Preloader />} ><Terms /></Suspense>} />
         <Route path="/delete_account" element={<Suspense fallback={<Preloader />} ><Delete /></Suspense>} />
-        
+
       </Routes>
     </BrowserRouter>
   );
